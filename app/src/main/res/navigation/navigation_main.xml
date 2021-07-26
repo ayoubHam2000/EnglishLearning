@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/intro">
+
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.example.englishlearning.Fragments.RecordFragment"
+        android:label="fragment_record"
+        tools:layout="@layout/fragment_record" />
+    <fragment
+        android:id="@+id/informationList"
+        android:name="com.example.englishlearning.Fragments.InformationList"
+        android:label="fragment_information_list"
+        tools:layout="@layout/fragment_information_list" >
+        <action
+            android:id="@+id/action_informationList_to_listItem"
+            app:destination="@id/listItem" />
+        <action
+            android:id="@+id/action_informationList_to_quiz"
+            app:destination="@id/quiz" />
+    </fragment>
+    <fragment
+        android:id="@+id/intro"
+        android:name="com.example.englishlearning.Fragments.Intro"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_intro_to_recordFragment"
+            app:destination="@id/recordFragment" />
+        <action
+            android:id="@+id/action_intro_to_informationList"
+            app:destination="@id/informationList" />
+        <action
+            android:id="@+id/action_intro_to_quiz"
+            app:destination="@id/quiz" />
+        <action
+            android:id="@+id/action_intro_to_englishReminder"
+            app:destination="@id/englishReminder" />
+        <action
+            android:id="@+id/action_intro_to_englishReminderBranches"
+            app:destination="@id/englishReminderBranches" />
+    </fragment>
+    <fragment
+        android:id="@+id/listItem"
+        android:name="com.example.englishlearning.Fragments.listItem"
+        android:label="fragment_list_item"
+        tools:layout="@layout/fragment_list_item" />
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.example.englishlearning.Fragments.Quiz"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quiz_to_solution"
+            app:destination="@id/solution" />
+    </fragment>
+    <fragment
+        android:id="@+id/solution"
+        android:name="com.example.englishlearning.Fragments.Solution"
+        android:label="fragment_solution"
+        tools:layout="@layout/fragment_solution" />
+    <fragment
+        android:id="@+id/englishReminder"
+        android:name="com.example.englishlearning.Fragments.pEnglishReminder.EnglishReminder"
+        android:label="english_reminder_fragment"
+        tools:layout="@layout/english_reminder_fragment" >
+        <action
+            android:id="@+id/action_englishReminder_to_englishReminderBranches"
+            app:destination="@id/englishReminderBranches" />
+    </fragment>
+    <fragment
+        android:id="@+id/englishReminderListDisplay"
+        android:name="com.example.englishlearning.Fragments.pEnglishReminder.EnglishReminderListDisplay"
+        android:label="english_reminder_display_fragment"
+        tools:layout="@layout/english_reminder_display_fragment" />
+    <fragment
+        android:id="@+id/englishReminderBranches"
+        android:name="com.example.englishlearning.Fragments.pEnglishReminder.EnglishReminderBranches"
+        android:label="english_reminder_branch_fragment"
+        tools:layout="@layout/english_reminder_branch_fragment" >
+        <action
+            android:id="@+id/action_englishReminderBranches_to_englishReminderListDisplay"
+            app:destination="@id/englishReminderListDisplay" />
+    </fragment>
+</navigation>

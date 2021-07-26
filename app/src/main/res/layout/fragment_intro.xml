@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Intro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/toRecordFragment"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="180dp"
+            android:background="@color/design_default_color_primary_dark"
+            android:text="Record"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/toListFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="List"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="@+id/toRecordFragment"
+            app:layout_constraintStart_toStartOf="@+id/toRecordFragment"
+            app:layout_constraintTop_toBottomOf="@+id/toRecordFragment" />
+
+        <Button
+            android:id="@+id/toQuizBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorAccent"
+            android:text="QUIZ"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="@+id/toListFragment"
+            app:layout_constraintStart_toStartOf="@+id/toListFragment"
+            app:layout_constraintTop_toBottomOf="@+id/toListFragment" />
+
+        <Button
+            android:id="@+id/toRandomQuiz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_red_light"
+            android:text="RandomQuiz"
+            android:textColor="@android:color/background_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/toQuizBtn"
+            app:layout_constraintStart_toStartOf="@+id/toQuizBtn"
+            app:layout_constraintTop_toBottomOf="@+id/toQuizBtn" />
+
+        <Button
+            android:id="@+id/toWordsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_red_light"
+            android:text="Vocabularies"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="@+id/toRandomQuiz"
+            app:layout_constraintStart_toStartOf="@+id/toRandomQuiz"
+            app:layout_constraintTop_toBottomOf="@+id/toRandomQuiz" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
